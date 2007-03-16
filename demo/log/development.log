@@ -1,0 +1,543 @@
+  [4;36;1mSQL (0.032207)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.013011)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001206)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;36;1mSQL (0.023736)[0m   [0;1mCREATE TABLE users ("id" INTEGER PRIMARY KEY NOT NULL) [0m
+  [4;35;1mSQL (0.014412)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000654)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000652)[0m   [0mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000375)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000243)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000308)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.023730)[0m   [0mDROP TABLE users[0m
+  [4;36;1mSQL (0.007233)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000368)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000432)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (1)
+  [4;35;1mSQL (0.023992)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY NOT NULL, "username" varchar(255) DEFAULT NULL, "first_name" varchar(255) DEFAULT NULL, "last_name" varchar(255) DEFAULT NULL, "admin" boolean DEFAULT NULL, "created_on" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.008448)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000587)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000342)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000094)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000444)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000240)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to LoadUsers (2)
+  [4;36;1mSQL (0.000719)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'jerry', 'Jerry', 'Smith')[0m
+  [4;35;1mSQL (0.000299)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'shadow', 'Sam', 'Dickerson')[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'catgrl', 'Sara', 'Nowatte')[0m
+  [4;35;1mSQL (0.000213)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'cain', 'Cain', 'Levy')[0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'flier', 'Fred', 'Swallow')[0m
+  [4;35;1mSQL (0.000374)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'hazel', 'Hazel', 'Dickerson')[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'matterhorn', 'Hulk', 'Jones')[0m
+  [4;35;1mSQL (0.000202)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'bud', 'Billy', 'Edwards')[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'gruff', 'Boy', 'Jones')[0m
+  [4;35;1mSQL (0.000540)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'molly', 'Molly', 'Mitchell')[0m
+  [4;36;1mSQL (0.000529)[0m   [0;1mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'sugarnspice', 'Tammy', 'Rallins')[0m
+  [4;35;1mSQL (0.000538)[0m   [0mINSERT INTO users ("created_on", "admin", "username", "first_name", "last_name") VALUES('2007-03-16 09:43:03', NULL, 'charity', 'Charity', 'Stucke')[0m
+  [4;36;1mSQL (0.078504)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000786)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.001035)[0m   [0;1mSELECT name FROM sqlite_master WHERE type = 'table'[0m
+  [4;35;1mSQL (0.000261)[0m   [0mPRAGMA index_list(users)[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2007-03-16 09:43:19) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+ActionController::UnknownAction (No action responded to index):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:330:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:79:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:63:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2007-03-16 09:46:22) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering nothingtruelayoutfalse within layouts/application
+Completed in 0.09729 (10 reqs/sec) | Rendering: 0.00627 (6%) | 200 OK [http://localhost/]
+
+
+Processing UsersController#form (for 127.0.0.1 at 2007-03-16 09:46:25) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"form", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/form
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::ReceiptDetail) on line #1 of app/views/users/form.rhtml:
+1: <% form_for :receipt_detail, ReceiptDetail.new do |f| %>
+2:   Amount: <%= f.text_field :amount %><br />
+3:   Description: <%= f.text_field :description %><br />
+4:   Receipt: <%= record_select_field 'receipt_detail[receipt]', Receipt.new, :controller => :record_select_demo %><br />
+
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:452:in `const_missing'
+    #{RAILS_ROOT}/app/views/users/form.rhtml:1:in `_run_rhtml_47app47views47users47form46rhtml'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_view/base.rb:301:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_view/base.rb:260:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:806:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:330:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:79:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:63:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing UsersController#form (for 127.0.0.1 at 2007-03-16 09:48:37) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"form", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/form
+Completed in 0.12543 (7 reqs/sec) | Rendering: 0.12438 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/form]
+
+
+Processing UsersController#link (for 127.0.0.1 at 2007-03-16 09:49:07) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"link", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/link
+Completed in 0.00640 (156 reqs/sec) | Rendering: 0.00472 (73%) | 200 OK [http://localhost/users/link]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:49:10) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+
+
+NameError (uninitialized constant Paginator):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:266:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:452:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:464:in `const_missing'
+    .//vendor/plugins/record_select/lib/record_select.rb:12:in `browse'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:330:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:79:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:63:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing UsersController#link (for 127.0.0.1 at 2007-03-16 09:50:49) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"link", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/link
+Completed in 0.00762 (131 reqs/sec) | Rendering: 0.00654 (85%) | 200 OK [http://localhost/users/link]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:50:51) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000358)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+DEPRECATION WARNING: end_form_tag is deprecated and will be removed from Rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from _run_rhtml_47vendor47plugins47record_select47lib47views47_search46rhtml at script/../config/../app/views/../../vendor/plugins/record_select/lib/views/_search.rhtml:5)
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00403)
+  [4;35;1mUser Load (0.007034)[0m   [0mSELECT * FROM users ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.07628)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.08195)
+Completed in 0.12916 (7 reqs/sec) | Rendering: 0.07624 (59%) | DB: 0.00739 (5%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:50:54) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000251)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001123)[0m   [0mSELECT * FROM users ORDER BY id ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00800)
+Completed in 0.02513 (39 reqs/sec) | Rendering: 0.01484 (59%) | DB: 0.00137 (5%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:02) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000256)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+DEPRECATION WARNING: end_form_tag is deprecated and will be removed from Rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from _run_rhtml_47vendor47plugins47record_select47lib47views47_search46rhtml at script/../config/../app/views/../../vendor/plugins/record_select/lib/views/_search.rhtml:5)
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00246)
+  [4;35;1mUser Load (0.001121)[0m   [0mSELECT * FROM users ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00656)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.00976)
+Completed in 0.02002 (49 reqs/sec) | Rendering: 0.00917 (45%) | DB: 0.00138 (6%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:04) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000358)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001195)[0m   [0mSELECT * FROM users ORDER BY id ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00866)
+Completed in 0.11847 (8 reqs/sec) | Rendering: 0.01688 (14%) | DB: 0.00155 (1%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:06) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000253)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001122)[0m   [0mSELECT * FROM users ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00763)
+Completed in 0.03195 (31 reqs/sec) | Rendering: 0.01315 (41%) | DB: 0.00137 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#link (for 127.0.0.1 at 2007-03-16 09:51:32) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"link", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/link
+Completed in 0.00549 (182 reqs/sec) | Rendering: 0.00437 (79%) | 200 OK [http://localhost/users/link]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:34) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.007746)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+DEPRECATION WARNING: end_form_tag is deprecated and will be removed from Rails 2.0  See http://www.rubyonrails.org/deprecation for details. (called from _run_rhtml_47vendor47plugins47record_select47lib47views47_search46rhtml at script/../config/../app/views/../../vendor/plugins/record_select/lib/views/_search.rhtml:5)
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00263)
+  [4;35;1mUser Load (0.002837)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00759)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01095)
+Completed in 0.09008 (11 reqs/sec) | Rendering: 0.00863 (9%) | DB: 0.01058 (11%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:37) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000257)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001490)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00776)
+Completed in 0.02593 (38 reqs/sec) | Rendering: 0.01407 (54%) | DB: 0.00175 (6%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:44) [GET]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000259)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001346)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00785)
+Completed in 0.02539 (39 reqs/sec) | Rendering: 0.01356 (53%) | DB: 0.00161 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:51:52) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"gr", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: first_namelast_name: SELECT count(*) AS count_all FROM users WHERE ((LOWER(first_namelast_name) LIKE 'gr%')) [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: first_namelast_name: SELECT count(*) AS count_all FROM users WHERE ((LOWER(first_namelast_name) LIKE 'gr%')) ):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:145:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:346:in `catch_schema_changes'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:145:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:165:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:177:in `select_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/abstract/database_statements.rb:19:in `select_value'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:212:in `execute_simple_calculation'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:121:in `calculate'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:117:in `calculate'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:45:in `count'
+    .//vendor/plugins/record_select/lib/record_select.rb:12:in `browse'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:330:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:79:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:63:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:53:55) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"gru", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: first_namelast_name: SELECT count(*) AS count_all FROM users WHERE ((LOWER(first_namelast_name) LIKE 'gru%')) [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: first_namelast_name: SELECT count(*) AS count_all FROM users WHERE ((LOWER(first_namelast_name) LIKE 'gru%')) ):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/abstract_adapter.rb:128:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:145:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:346:in `catch_schema_changes'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:145:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:165:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/sqlite_adapter.rb:177:in `select_one'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/connection_adapters/abstract/database_statements.rb:19:in `select_value'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:212:in `execute_simple_calculation'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:121:in `calculate'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:117:in `calculate'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-1.15.2/lib/active_record/calculations.rb:45:in `count'
+    .//vendor/plugins/record_select/lib/record_select.rb:12:in `browse'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:1095:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/base.rb:330:in `process'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:113:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:79:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/webrick_server.rb:63:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-1.4.1/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-1.2.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-1.13.2/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:21) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"gruf", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000500)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'gruf%' OR LOWER(last_name) LIKE 'gruf%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000897)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'gruf%' OR LOWER(last_name) LIKE 'gruf%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00403)
+Completed in 0.12471 (8 reqs/sec) | Rendering: 0.00972 (7%) | DB: 0.00140 (1%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:23) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"gru", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000374)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'gru%' OR LOWER(last_name) LIKE 'gru%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000538)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'gru%' OR LOWER(last_name) LIKE 'gru%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00143)
+Completed in 0.10372 (9 reqs/sec) | Rendering: 0.01021 (9%) | DB: 0.00091 (0%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:24) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"g", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000332)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'g%' OR LOWER(last_name) LIKE 'g%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000490)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'g%' OR LOWER(last_name) LIKE 'g%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00122)
+Completed in 0.01772 (56 reqs/sec) | Rendering: 0.00721 (40%) | DB: 0.00082 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:25) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000287)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001583)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00834)
+Completed in 0.02823 (35 reqs/sec) | Rendering: 0.01541 (54%) | DB: 0.00187 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:30) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"dick", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000327)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'dick%' OR LOWER(last_name) LIKE 'dick%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000911)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'dick%' OR LOWER(last_name) LIKE 'dick%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00512)
+Completed in 0.02199 (45 reqs/sec) | Rendering: 0.01117 (50%) | DB: 0.00124 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:31) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"di", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000361)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'di%' OR LOWER(last_name) LIKE 'di%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000926)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'di%' OR LOWER(last_name) LIKE 'di%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01125)
+Completed in 0.02789 (35 reqs/sec) | Rendering: 0.01666 (59%) | DB: 0.00129 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:32) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000282)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001503)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00774)
+Completed in 0.02591 (38 reqs/sec) | Rendering: 0.01387 (53%) | DB: 0.00178 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:33) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"d", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000903)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'd%' OR LOWER(last_name) LIKE 'd%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000916)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'd%' OR LOWER(last_name) LIKE 'd%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00442)
+Completed in 0.03690 (27 reqs/sec) | Rendering: 0.00988 (26%) | DB: 0.00182 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:34) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000267)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001356)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00710)
+Completed in 0.02407 (41 reqs/sec) | Rendering: 0.01239 (51%) | DB: 0.00162 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:35) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"j", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000380)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE 'j%' OR LOWER(last_name) LIKE 'j%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001209)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE 'j%' OR LOWER(last_name) LIKE 'j%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00618)
+Completed in 0.10600 (9 reqs/sec) | Rendering: 0.01336 (12%) | DB: 0.00159 (1%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-03-16 09:54:50) [POST]
+  Session ID: 914f9e22f7d9bac80294f03806258c8b
+  Parameters: {"search"=>"", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000257)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001364)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00701)
+Completed in 0.02491 (40 reqs/sec) | Rendering: 0.01451 (58%) | DB: 0.00162 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
