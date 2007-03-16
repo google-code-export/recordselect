@@ -1,0 +1,5 @@
+<% form_tag do %>
+  Amount: <%= text_field_tag 'amount' %><br />
+  Description: <%= text_field_tag 'description' %><br />
+  User: <%= record_select_field 'user', User.new %><br />
+<% end %>
