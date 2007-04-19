@@ -1,6 +1,6 @@
 <div style="width: 500px; margin: 200px auto;">
   <form>
-  <%= link_to_record_select 'Pick A User', 'users', :onselect => 'alert(id + "\n" + label); container.remove();' %>
+  <%= link_to_record_select 'Pick A User', 'users', :onselect => "alert('You picked ' + label + ', id#' + id); container.remove();" %>
   </form>
   <ol>
     <li>a</li>
