@@ -1,5 +1,5 @@
 .record-select {
-  width: 400px;
+  width: 300px;
   border: 1px solid #afd0f5;
   font-family: sans-serif;
   background-color: #fff;
@@ -8,6 +8,10 @@
 
 .record-select img {
   border-width: 0px;
+}
+
+.record-select form {
+  display: inline;
 }
 
 .record-select ol,
@@ -24,7 +28,7 @@
 
 .record-select ol a {
   display: block;
-  width: 100%;
+  zoom: 1;
   background-color: #e6f2ff;
   padding: 2px 4px;
 }
@@ -43,6 +47,10 @@
 
 .record-select ol .next a {
   border-top: 1px solid #afd0f5;
+}
+
+.record-select ol .pagination a img {
+  vertical-align: middle;
 }
 
 .record-select ol a:hover {
