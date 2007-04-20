@@ -1,0 +1,30 @@
+body {
+  font-family: arial;
+  font-size: 12pt;
+}
+
+a {
+  color: #123456;
+}
+
+div#page {
+  width: 600px;
+  margin: 0px auto;
+  border: 1px solid #aaa;
+  padding: 3px;
+}
+
+div#menu {
+  background-color: #ccc;
+  padding: 4px;
+}
+
+div#example {
+  margin: 10px 0px;
+}
+
+pre.code {
+  background-color: #666;
+  color: #fff;
+  font-size: 80%;
+}

@@ -3,14 +3,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>RecordSelect Demo</title>
+  <%= stylesheet_link_tag 'main' %>
   <%= javascript_include_tag :defaults %>
   <%= record_select_includes %>
 </head>
 <body>
-<div>
-  <%= link_to 'Form Helper', :controller => 'users', :action => 'form' %>
-  <%= link_to 'Link Helper', :controller => 'users', :action => 'link' %>
-</div>
-<%= yield %>
+<div id="page">
+  <div id="menu">
+    <%= link_to 'Form Helper', :controller => 'users', :action => 'form' %>
+    <%= link_to 'Link Helper', :controller => 'users', :action => 'link' %>
+  </div>
+
+  <div id="example">
+    <%= yield %>
+  </div>
 </body>
 </html>
