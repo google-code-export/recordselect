@@ -1,0 +1,4 @@
+<%= link_to_remote 'Load',
+                   :url => {:action => :ajax},
+                   :update => 'loading_area' -%>
+<div id="loading_area" style="border: 1px solid #666; margin: 3px; padding: 3px;"></div>
