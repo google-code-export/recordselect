@@ -1,0 +1,15 @@
+#summary How to get and run the demo application
+
+= Introduction =
+
+RecordSelect's repository includes a demo application you can use to try out the main functionality before you commit to installing it in your own application. This page will tell you where the demo is and how to get it set up.
+
+
+= Details =
+
+You can check out the demo application via Subversion from http://recordselect.googlecode.com/svn/demo/. Installing is as simple as configuring a database, running the migrations, and starting the server.
+
+The demo includes:
+  * a sample usage of the form helper
+  * a sample usage of the link_to helper
+  * proof that RecordSelect loads from a partial retrieved via AJAX
