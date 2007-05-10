@@ -1,0 +1,19 @@
+#summary Example uses of the RecordSelect helpers
+
+* record_select_field
+
+{{{
+<% form_tag do %>
+  Amount: <%= text_field_tag 'amount' %><br />
+  Description: <%= text_field_tag 'description' %><br />
+  User: <%= record_select_field 'user', User.new %><br />
+<% end %>
+}}}
+
+* link_to_record_select
+
+{{{
+<%= link_to_record_select 'Pick A User', 'users', :onselect => "alert('You picked ' + label + ', id#' + id);" %>
+}}}
+
+You can see these examples in action in the [demo].
