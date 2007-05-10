@@ -1,0 +1,22 @@
+#summary How to configure RecordSelect on your controllers
+#labels Featured
+
+RecordSelect configures through one method with optional arguments, like this:
+
+{{{
+class UsersController < ApplicationController
+  record_select :search_on => [:first_name, last_name]
+end
+}}}
+
+The options you can pass are:
+
+  * *:model*: the name of the model you want to expose. defaults based on the name of the controller
+  * *:per_page*: how many records to show per page when browsing
+  * *:notify*: a method name to invoke when a record has been selected, if you want server-side notification.
+  * *:order_by*: a SQL string to order the search results
+  * *:search_on*: a field name, or an array of field names. these fields will each be matched against each search term.
+  * *:full_text_search*: a boolean for whether to use a %?% search pattern or not. default is false.
+
+
+
