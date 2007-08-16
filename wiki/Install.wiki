@@ -1,0 +1,17 @@
+#summary Installing and setting up RecordSelect in your own Rails application.
+#labels Featured
+
+==INSTALL==
+  # Install from SVN:
+    `./script/plugin install http://recordselect.googlecode.com/svn/releases/record_select`
+  # Then add the CSS and JavaScript to your layout by including the following line:
+    `<%= record_select_includes %>`
+  # [ControllerSetup Enable and configure it on a controller.]
+    `class UsersController < ApplicationController`
+      `record_select :per_page => 5, :search_on => 'username'`
+    `end`
+  # Optional: to use RecordSelect RESTfully, add the following to your routes.rb:
+    `map.resources :model_id, :collection => {:browse => :get}, :member => {:select => :post}`
+  # Now go ahead and [HelperExamples Use it somewhere.]
+
+
