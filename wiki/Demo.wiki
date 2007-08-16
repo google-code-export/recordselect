@@ -1,15 +1,22 @@
 #summary How to get and run the demo application
+#labels Featured
 
-= Introduction =
-
-RecordSelect's repository includes a demo application you can use to try out the main functionality before you commit to installing it in your own application. This page will tell you where the demo is and how to get it set up.
-
-
-= Details =
-
-You can check out the demo application via Subversion from http://recordselect.googlecode.com/svn/demo/. Installing is as simple as configuring a database, running the migrations, and starting the server.
-
-The demo includes:
+RecordSelect's repository includes a demo application for you to play with. The demo provides good examples of how it can be used and how to use it. It includes:
   * a sample usage of the form helper
   * a sample usage of the link_to helper
   * proof that RecordSelect loads from a partial retrieved via AJAX
+
+== Installing the Demo ==
+  # grab the demo from Subversion
+    `svn co http://recordselect.googlecode.com/svn/demo record_select_demo`
+  # set up the database
+    Copy config/database.yml.example to database.yml and set yourself up. Sqlite3 is great for this kind of stuff!
+  # run the migrations
+    `rake db:migrate`
+  # make sure you have the Paginator gem installed
+    `gem install paginator -y`
+  # start the server and play around
+
+
+
+
