@@ -1,3 +1,4 @@
+/* BASICS */
 body {
   font-family: arial;
   font-size: 12pt;
@@ -7,24 +8,63 @@ a {
   color: #123456;
 }
 
-div#page {
+/* MAJOR ELEMENTS */
+#page {
   width: 600px;
   margin: 0px auto;
-  border: 1px solid #aaa;
+}
+
+#menu {
+  overflow: auto;
+  zoom: 1;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+#menu li {
+  float: left;
+  margin: 0px 2px;
+}
+
+#menu li a {
+  border-color: #e8dfac;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  background-color: #fffdca;
+  display: block;
+  padding: 5px 10px;
+}
+
+#menu a:focus { outline: none; }
+
+#demo-link #link-tab a,
+#demo-form #form-tab a,
+#demo-ajax #ajax-tab a {
+  background-color: #a18e69;
+  border-color: #a18e69;
+  color: #fff;
+}
+
+#example {
+  padding: 10px 5px;
+  background-color: #fffcf2;
+  border: 1px solid #a18e69;
+}
+
+#explanation {
+  border: 1px dashed #a18e69;
+  padding: 7px 3px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+#loading-area {
+  border: 1px solid #a18e69;
+  background-color: #fffdca;
   padding: 3px;
 }
 
-div#menu {
-  background-color: #ccc;
-  padding: 4px;
-}
-
-div#example {
-  margin: 10px 0px;
-}
-
-pre.code {
-  background-color: #666;
-  color: #fff;
-  font-size: 80%;
+#loading-area #explanation {
+  display: none;
 }

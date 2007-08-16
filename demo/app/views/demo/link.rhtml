@@ -1,0 +1,13 @@
+<form>
+<%= link_to_record_select 'Pick A User', 'users', :onselect => "alert('You picked ' + label + ', id#' + id);" %>
+</form>
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin tincidunt. Morbi quis lacus. Sed id lacus. Praesent sed pede. Duis mollis, urna id dapibus vulputate, nibh mi laoreet nulla, eu tempus libero ante vitae neque. Pellentesque venenatis sodales libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce massa. Donec ultrices leo ultrices turpis. Nullam venenatis, ipsum id placerat nonummy, tellus dui vulputate eros, vel ornare nisi odio a enim. Maecenas felis nibh, aliquet in, ullamcorper eget, porta vitae, metus.
+</p>
+
+<div id="explanation">
+<p>This demonstrates using a link to load RecordSelect. It customizes the onselect event to simply report what you clicked on. You can, of course, customize it to do anything else. The lorem ipsum text is there to show that RecordSelect doesn't disrupt page flow.</p>
+
+<p>Note that this link has been nested inside &lt;form> tags, to show that it just doesn't matter.</p>
+</div>

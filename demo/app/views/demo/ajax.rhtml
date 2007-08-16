@@ -1,0 +1,8 @@
+<%= link_to_remote 'Load Link Helper demo with AJAX',
+                   :url => {:action => :ajax},
+                   :update => 'loading-area' -%>
+<div id="loading-area">Link Helper demo will load here.</div>
+
+<div id="explanation">
+<p>It actually took a little refactoring to make sure that the RecordSelect-spawning objects will work when loaded with AJAX. So I created a demo. Not much else to it!</p>
+</div>
