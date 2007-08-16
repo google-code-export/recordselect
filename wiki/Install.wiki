@@ -12,6 +12,5 @@
     `end`
   # Optional: to use RecordSelect RESTfully, add the following to your routes.rb:
     `map.resources :model_id, :collection => {:browse => :get}, :member => {:select => :post}`
-  # Now go ahead and [HelperExamples Use it somewhere.]
-
+  # Now go ahead and [HelperExamples use it somewhere.]
 
