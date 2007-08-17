@@ -8,6 +8,11 @@ a {
   color: #123456;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* MAJOR ELEMENTS */
 #page {
   width: 600px;
