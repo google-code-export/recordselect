@@ -45,7 +45,8 @@ h1, h2, h3, h4, h5 {
 
 #demo-link #link-tab a,
 #demo-form #form-tab a,
-#demo-ajax #ajax-tab a {
+#demo-ajax #ajax-tab a,
+#demo-multi #multi-tab a {
   background-color: #a18e69;
   border-color: #a18e69;
   color: #fff;

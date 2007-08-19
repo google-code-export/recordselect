@@ -5,4 +5,10 @@ class DemoController < ApplicationController
       wants.js {render :action => 'link', :layout => false}
     end
   end
+
+  def multi
+    @current = User.find(:all, :limit => 2).collect do |r|
+      [r.id, r.to_label]
+    end
+  end
 end

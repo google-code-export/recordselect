@@ -12282,3 +12282,2100 @@ Processing DemoController#index (for 127.0.0.1 at 2007-08-16 11:48:33) [GET]
 Rendering  within layouts/application
 Rendering demo/index
 Completed in 0.00712 (140 reqs/sec) | Rendering: 0.00554 (77%) | 200 OK [http://localhost/]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-16 12:39:17) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.16695 (5 reqs/sec) | Rendering: 0.16590 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:18) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000528)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00412)
+  [4;35;1mUser Load (0.002160)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00994)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01608)
+Completed in 0.02807 (35 reqs/sec) | Rendering: 0.01448 (51%) | DB: 0.00269 (9%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:21) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000455)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001786)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00902)
+Completed in 0.02952 (33 reqs/sec) | Rendering: 0.01717 (58%) | DB: 0.00224 (7%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:22) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"3", "update"=>"1"}
+  [4;36;1mSQL (0.000531)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001007)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 10[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00693)
+Completed in 0.02925 (34 reqs/sec) | Rendering: 0.01542 (52%) | DB: 0.00154 (5%) | 200 OK [http://localhost/users/browse?update=1&page=3]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:22) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000486)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001431)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00981)
+Completed in 0.02940 (34 reqs/sec) | Rendering: 0.01720 (58%) | DB: 0.00192 (6%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:23) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000451)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001406)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00800)
+Completed in 0.02825 (35 reqs/sec) | Rendering: 0.01628 (57%) | DB: 0.00186 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:24) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000528)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001976)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00933)
+Completed in 0.03235 (30 reqs/sec) | Rendering: 0.01718 (53%) | DB: 0.00250 (7%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:25) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"3", "update"=>"1"}
+  [4;36;1mSQL (0.000483)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001607)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 10[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00721)
+Completed in 0.02654 (37 reqs/sec) | Rendering: 0.01416 (53%) | DB: 0.00209 (7%) | 200 OK [http://localhost/users/browse?update=1&page=3]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:25) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;36;1mSQL (0.000452)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001379)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01013)
+Completed in 0.02932 (34 reqs/sec) | Rendering: 0.01744 (59%) | DB: 0.00183 (6%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-16 12:39:26) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000588)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001494)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.02619)
+Completed in 0.05276 (18 reqs/sec) | Rendering: 0.03442 (65%) | DB: 0.00208 (3%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#index (for 127.0.0.1 at 2007-08-17 15:47:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/index
+Completed in 0.01102 (90 reqs/sec) | Rendering: 0.00998 (90%) | 200 OK [http://localhost/]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:47:16) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.16519 (6 reqs/sec) | Rendering: 0.16414 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 15:47:19) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000530)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00386)
+  [4;35;1mUser Load (0.001734)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01239)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02216)
+Completed in 0.03418 (29 reqs/sec) | Rendering: 0.02098 (61%) | DB: 0.00226 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:48:32) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.17338 (5 reqs/sec) | Rendering: 0.17176 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:48:40) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03854 (25 reqs/sec) | Rendering: 0.03639 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:49:22) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02791 (35 reqs/sec) | Rendering: 0.02635 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 15:49:33) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.001506)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00385)
+  [4;35;1mUser Load (0.002408)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01194)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01719)
+Completed in 0.16492 (6 reqs/sec) | Rendering: 0.01562 (9%) | DB: 0.00391 (2%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:49:52) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03380 (29 reqs/sec) | Rendering: 0.03221 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:50:15) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02958 (33 reqs/sec) | Rendering: 0.02686 (90%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:50:43) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.17407 (5 reqs/sec) | Rendering: 0.17245 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:50:45) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"ueoa", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02010 (49 reqs/sec) | Rendering: 0.01900 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 15:50:51) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000468)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00206)
+  [4;35;1mUser Load (0.001443)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00667)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.00961)
+Completed in 0.02113 (47 reqs/sec) | Rendering: 0.00872 (41%) | DB: 0.00191 (9%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:50:52) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.10663 (9 reqs/sec) | Rendering: 0.10503 (98%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:51:51) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03072 (32 reqs/sec) | Rendering: 0.02902 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:52:05) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02770 (36 reqs/sec) | Rendering: 0.02612 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:52:12) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.01671 (59 reqs/sec) | Rendering: 0.01572 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:52:30) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03188 (31 reqs/sec) | Rendering: 0.03017 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:53:07) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02647 (37 reqs/sec) | Rendering: 0.02489 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:55:18) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.10725 (9 reqs/sec) | Rendering: 0.10626 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 15:56:50) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000686)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00371)
+  [4;35;1mUser Load (0.002299)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01281)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01782)
+Completed in 0.03867 (25 reqs/sec) | Rendering: 0.01636 (42%) | DB: 0.00299 (7%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:56:52) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"12", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.01748 (57 reqs/sec) | Rendering: 0.01647 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:58:45) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.35191 (2 reqs/sec) | Rendering: 0.34995 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 15:58:50) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000711)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00558)
+  [4;35;1mUser Load (0.002833)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.02563)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.03708)
+Completed in 0.05544 (18 reqs/sec) | Rendering: 0.03508 (63%) | DB: 0.00354 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 15:58:51) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"hcrhcr", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.04132 (24 reqs/sec) | Rendering: 0.03967 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:00:16) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.95389 (1 reqs/sec) | Rendering: 0.95227 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:00:23) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000896)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00635)
+  [4;35;1mUser Load (0.002720)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01764)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02698)
+Completed in 0.05072 (19 reqs/sec) | Rendering: 0.02509 (49%) | DB: 0.00362 (7%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:00:31) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000466)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00256)
+  [4;35;1mUser Load (0.001412)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00869)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01283)
+Completed in 0.03035 (32 reqs/sec) | Rendering: 0.01200 (39%) | DB: 0.00188 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:01:01) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.59066 (1 reqs/sec) | Rendering: 0.58843 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:01:02) [POST]
+  Parameters: {"search"=>"Dickerson, Sam (shadow)", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000921)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%sam%' OR LOWER(last_name) LIKE '%sam%') AND (LOWER(first_name) LIKE '%(shadow)%' OR LOWER(last_name) LIKE '%(shadow)%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001185)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%sam%' OR LOWER(last_name) LIKE '%sam%') AND (LOWER(first_name) LIKE '%(shadow)%' OR LOWER(last_name) LIKE '%(shadow)%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00873)
+Completed in 0.10200 (9 reqs/sec) | Rendering: 0.02725 (26%) | DB: 0.00211 (2%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:01:08) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000639)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00618)
+  [4;35;1mUser Load (0.002439)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01889)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02817)
+Completed in 0.04682 (21 reqs/sec) | Rendering: 0.02661 (56%) | DB: 0.00308 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:01:10) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"a", "description"=>"b", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.05398 (18 reqs/sec) | Rendering: 0.05183 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:02:00) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.17076 (5 reqs/sec) | Rendering: 0.16970 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:02) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000540)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00417)
+  [4;35;1mUser Load (0.001809)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00972)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01586)
+Completed in 0.02812 (35 reqs/sec) | Rendering: 0.01460 (51%) | DB: 0.00235 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:06) [POST]
+  Parameters: {"search"=>"d", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000821)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.002108)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01000)
+Completed in 0.04234 (23 reqs/sec) | Rendering: 0.02085 (49%) | DB: 0.00293 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:07) [POST]
+  Parameters: {"search"=>"d ", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.001071)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.002065)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01010)
+Completed in 0.06021 (16 reqs/sec) | Rendering: 0.02109 (35%) | DB: 0.00314 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:13) [POST]
+  Parameters: {"search"=>"d  ", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000744)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.002017)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01142)
+Completed in 0.04103 (24 reqs/sec) | Rendering: 0.02138 (52%) | DB: 0.00276 (6%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:16) [POST]
+  Parameters: {"search"=>"d", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.002695)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001242)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%d%' OR LOWER(last_name) LIKE '%d%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00617)
+Completed in 0.03266 (30 reqs/sec) | Rendering: 0.01374 (42%) | DB: 0.00394 (12%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:21) [POST]
+  Parameters: {"search"=>"dick", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000792)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001558)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01532)
+Completed in 0.04880 (20 reqs/sec) | Rendering: 0.02823 (57%) | DB: 0.00235 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:23) [POST]
+  Parameters: {"search"=>"dick h", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000979)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%') AND (LOWER(first_name) LIKE '%h%' OR LOWER(last_name) LIKE '%h%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001339)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%') AND (LOWER(first_name) LIKE '%h%' OR LOWER(last_name) LIKE '%h%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00678)
+Completed in 0.04308 (23 reqs/sec) | Rendering: 0.01735 (40%) | DB: 0.00232 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:02:24) [POST]
+  Parameters: {"search"=>"dick haz", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000533)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%') AND (LOWER(first_name) LIKE '%haz%' OR LOWER(last_name) LIKE '%haz%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000820)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dick%' OR LOWER(last_name) LIKE '%dick%') AND (LOWER(first_name) LIKE '%haz%' OR LOWER(last_name) LIKE '%haz%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00431)
+Completed in 0.02416 (41 reqs/sec) | Rendering: 0.01227 (50%) | DB: 0.00135 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:02:26) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.31795 (3 reqs/sec) | Rendering: 0.31637 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:08:37) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000661)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00355)
+  [4;35;1mUser Load (0.002359)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01165)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01647)
+Completed in 0.03503 (28 reqs/sec) | Rendering: 0.01496 (42%) | DB: 0.00302 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:08:41) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000623)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00695)
+  [4;35;1mUser Load (0.002866)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01108)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01962)
+Completed in 0.03739 (26 reqs/sec) | Rendering: 0.01759 (47%) | DB: 0.00349 (9%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:08:42) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"1", "description"=>"2", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03024 (33 reqs/sec) | Rendering: 0.02885 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:28:43) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.35725 (2 reqs/sec) | Rendering: 0.35543 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:29:06) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.35309 (2 reqs/sec) | Rendering: 0.35202 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:29:16) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.04432 (22 reqs/sec) | Rendering: 0.04207 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:29:35) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.19920 (5 reqs/sec) | Rendering: 0.19814 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:29:39) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000522)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.01059)
+  [4;35;1mUser Load (0.001740)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00988)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02245)
+Completed in 0.03387 (29 reqs/sec) | Rendering: 0.02126 (62%) | DB: 0.00226 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:29:43) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"98", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02548 (39 reqs/sec) | Rendering: 0.02446 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:29:57) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"98", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.27192 (3 reqs/sec) | Rendering: 0.27078 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:30:01) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000521)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00445)
+  [4;35;1mUser Load (0.001724)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01125)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01766)
+Completed in 0.02892 (34 reqs/sec) | Rendering: 0.01650 (57%) | DB: 0.00225 (7%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:30:04) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02696 (37 reqs/sec) | Rendering: 0.02596 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:30:04) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000590)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00240)
+  [4;35;1mUser Load (0.001474)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00677)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01009)
+Completed in 0.02272 (44 reqs/sec) | Rendering: 0.00917 (40%) | DB: 0.00206 (9%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:30:51) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.26724 (3 reqs/sec) | Rendering: 0.26605 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:30:54) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000703)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00580)
+  [4;35;1mUser Load (0.002765)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01597)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.03023)
+Completed in 0.04990 (20 reqs/sec) | Rendering: 0.02829 (56%) | DB: 0.00347 (6%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:31:01) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000651)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00459)
+  [4;35;1mUser Load (0.002277)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.02046)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02642)
+Completed in 0.05582 (17 reqs/sec) | Rendering: 0.02500 (44%) | DB: 0.00293 (5%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:31:02) [POST]
+  Parameters: {"user"=>"9", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.03962 (25 reqs/sec) | Rendering: 0.03248 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:31:20) [POST]
+  Parameters: {"user"=>"9", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.25504 (3 reqs/sec) | Rendering: 0.25400 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:31:24) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000531)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.01016)
+  [4;35;1mUser Load (0.001737)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01177)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02388)
+Completed in 0.03504 (28 reqs/sec) | Rendering: 0.02269 (64%) | DB: 0.00227 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:31:29) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02540 (39 reqs/sec) | Rendering: 0.02438 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:31:45) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.26061 (3 reqs/sec) | Rendering: 0.25956 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:31:47) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000522)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00413)
+  [4;35;1mUser Load (0.001712)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01402)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02019)
+Completed in 0.03329 (30 reqs/sec) | Rendering: 0.01903 (57%) | DB: 0.00223 (6%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:31:52) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000648)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00357)
+  [4;35;1mUser Load (0.008850)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01909)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02401)
+Completed in 0.04264 (23 reqs/sec) | Rendering: 0.01607 (37%) | DB: 0.00950 (22%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:31:58) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.06686 (14 reqs/sec) | Rendering: 0.06333 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:32:01) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000464)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00250)
+  [4;35;1mUser Load (0.001422)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00736)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01074)
+Completed in 0.02201 (45 reqs/sec) | Rendering: 0.00986 (44%) | DB: 0.00189 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:32:18) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.27284 (3 reqs/sec) | Rendering: 0.27178 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:32:26) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000739)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00652)
+  [4;35;1mUser Load (0.002844)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01571)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02532)
+Completed in 0.04847 (20 reqs/sec) | Rendering: 0.02331 (48%) | DB: 0.00358 (7%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:32:30) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02924 (34 reqs/sec) | Rendering: 0.02823 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:32:43) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.26583 (3 reqs/sec) | Rendering: 0.26478 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:32:47) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000530)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00360)
+  [4;35;1mUser Load (0.001816)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01739)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02303)
+Completed in 0.03518 (28 reqs/sec) | Rendering: 0.02178 (61%) | DB: 0.00235 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:32:48) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02558 (39 reqs/sec) | Rendering: 0.02454 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:32:51) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000508)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00220)
+  [4;35;1mUser Load (0.001446)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00702)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01013)
+Completed in 0.02262 (44 reqs/sec) | Rendering: 0.00926 (40%) | DB: 0.00195 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:32:58) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02915 (34 reqs/sec) | Rendering: 0.02814 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:33:36) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.27222 (3 reqs/sec) | Rendering: 0.27112 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:33:50) [POST]
+  Parameters: {"user"=>"", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.25523 (3 reqs/sec) | Rendering: 0.25313 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:33:52) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000522)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00358)
+  [4;35;1mUser Load (0.001784)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00971)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01522)
+Completed in 0.02706 (36 reqs/sec) | Rendering: 0.01402 (51%) | DB: 0.00231 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:33:55) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000464)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00229)
+  [4;35;1mUser Load (0.001424)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00733)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01057)
+Completed in 0.02245 (44 reqs/sec) | Rendering: 0.00979 (43%) | DB: 0.00189 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:33:57) [POST]
+  Parameters: {"search"=>"Dickerson, Hazel (hazel)", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000668)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel)%' OR LOWER(last_name) LIKE '%(hazel)%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000564)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel)%' OR LOWER(last_name) LIKE '%(hazel)%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00177)
+Completed in 0.02367 (42 reqs/sec) | Rendering: 0.01047 (44%) | DB: 0.00123 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:33:59) [POST]
+  Parameters: {"user"=>"6", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02726 (36 reqs/sec) | Rendering: 0.02623 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:34:39) [POST]
+  Parameters: {"user"=>"6", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.25036 (3 reqs/sec) | Rendering: 0.24931 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:41) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000523)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00358)
+  [4;35;1mUser Load (0.001741)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00953)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01516)
+Completed in 0.02649 (37 reqs/sec) | Rendering: 0.01397 (52%) | DB: 0.00226 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:48) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000653)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00368)
+  [4;35;1mUser Load (0.002265)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01523)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02027)
+Completed in 0.04031 (24 reqs/sec) | Rendering: 0.01886 (46%) | DB: 0.00292 (7%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:49) [POST]
+  Parameters: {"search"=>"Dickerson, Hazel (hazel)", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000945)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel)%' OR LOWER(last_name) LIKE '%(hazel)%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000968)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel)%' OR LOWER(last_name) LIKE '%(hazel)%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00271)
+Completed in 0.03611 (27 reqs/sec) | Rendering: 0.01446 (40%) | DB: 0.00191 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:57) [POST]
+  Parameters: {"search"=>"Dickerson, Hazel (hazel", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000820)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel%' OR LOWER(last_name) LIKE '%(hazel%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000775)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%') AND (LOWER(first_name) LIKE '%(hazel%' OR LOWER(last_name) LIKE '%(hazel%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00245)
+Completed in 0.03252 (30 reqs/sec) | Rendering: 0.01390 (42%) | DB: 0.00160 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:58) [POST]
+  Parameters: {"search"=>"Dickerson, Hazel ", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000744)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000699)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00229)
+Completed in 0.03232 (30 reqs/sec) | Rendering: 0.01370 (42%) | DB: 0.00144 (4%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:34:59) [POST]
+  Parameters: {"search"=>"Dickerson, Hazel", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000824)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000790)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%') AND (LOWER(first_name) LIKE '%hazel%' OR LOWER(last_name) LIKE '%hazel%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01767)
+Completed in 0.08598 (11 reqs/sec) | Rendering: 0.04931 (57%) | DB: 0.00161 (1%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:35:01) [POST]
+  Parameters: {"search"=>"Dickerson,", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000671)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.000526)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson,%' OR LOWER(last_name) LIKE '%dickerson,%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00158)
+Completed in 0.02119 (47 reqs/sec) | Rendering: 0.00928 (43%) | DB: 0.00120 (5%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:35:02) [POST]
+  Parameters: {"search"=>"Dickerson", "action"=>"browse", "controller"=>"users", "page"=>"1", "update"=>"1"}
+  [4;36;1mSQL (0.000521)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE ((LOWER(first_name) LIKE '%dickerson%' OR LOWER(last_name) LIKE '%dickerson%')) [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;35;1mUser Load (0.001553)[0m   [0mSELECT * FROM users WHERE ((LOWER(first_name) LIKE '%dickerson%' OR LOWER(last_name) LIKE '%dickerson%')) ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00556)
+Completed in 0.02513 (39 reqs/sec) | Rendering: 0.01287 (51%) | DB: 0.00207 (8%) | 200 OK [http://localhost/users/browse?update=1&page=1]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:35:03) [POST]
+  Parameters: {"user"=>"6", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.12470 (8 reqs/sec) | Rendering: 0.12369 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-17 16:35:07) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000671)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00339)
+  [4;35;1mUser Load (0.002302)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01199)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01667)
+Completed in 0.04688 (21 reqs/sec) | Rendering: 0.01554 (33%) | DB: 0.00297 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-17 16:35:11) [POST]
+  Parameters: {"user"=>"2", "commit"=>"Save changes", "action"=>"form", "amount"=>"", "description"=>"aoeu", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02560 (39 reqs/sec) | Rendering: 0.02460 (96%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#index (for 127.0.0.1 at 2007-08-19 14:15:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/index
+Completed in 0.02750 (36 reqs/sec) | Rendering: 0.02528 (91%) | 200 OK [http://localhost/]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#index (for 127.0.0.1 at 2007-08-19 14:15:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/index
+Completed in 0.01214 (82 reqs/sec) | Rendering: 0.00938 (77%) | 200 OK [http://localhost/]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:15:51) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+
+
+ActionView::TemplateError (uninitialized constant HashesController) on line #4 of app/views/demo/multi.rhtml:
+1: <% form_tag do %>
+2:   Amount: <%= text_field_tag 'amount' %><br />
+3:   Description: <%= text_field_tag 'description' %><br />
+4:   Users: <%= record_select_field 'users', {} %><br />
+5:   <%= submit_tag %>
+6: <% end %>
+7: 
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:266:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:464:in `const_missing'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/inflector.rb:250:in `constantize'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    vendor/plugins/record_select/lib/helpers.rb:120:in `assert_controller_responds'
+    vendor/plugins/record_select/lib/helpers.rb:47:in `record_select_field'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:4:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:1:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:16:32) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+ERROR: compiling _run_rhtml_47app47views47demo47multi46rhtml RAISED compile error
+script/../config/../app/views/demo/multi.rhtml:6: syntax error, unexpected kEND, expecting ')'
+ end ; _erbout.concat "\n"
+    ^
+script/../config/../app/views/demo/multi.rhtml:18: syntax error, unexpected kEND, expecting ')'
+Function body: def _run_rhtml_47app47views47demo47multi46rhtml(local_assigns)
+_erbout = '';  form_tag do ; _erbout.concat "\n"
+_erbout.concat "  Amount: "; _erbout.concat(( text_field_tag 'amount' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "  Description: "; _erbout.concat(( text_field_tag 'description' ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "  Users: "; _erbout.concat((# record_select_field 'users', {} ).to_s); _erbout.concat "<br />\n"
+_erbout.concat "  "; _erbout.concat(( submit_tag ).to_s); _erbout.concat "\n"
+ end ; _erbout.concat "\n"
+_erbout.concat "\n"
+_erbout.concat "<p>\n"
+_erbout.concat "<h5>Posted Params:</h5>\n"
+_erbout.concat(( params.reject {|k,v| [:action, :controller].include? k.to_sym}.inspect ).to_s); _erbout.concat "\n"
+_erbout.concat "</p>\n"
+_erbout.concat "\n"
+_erbout.concat "<div id=\"explanation\">\n"
+_erbout.concat "<p>This example is just a variation on "; _erbout.concat(( link_to 'the form demo', form_url ).to_s); _erbout.concat " with multi-select instead.</p>\n"
+_erbout.concat "</div>\n"
+_erbout.concat "\n"
+_erbout
+end
+Backtrace: script/../config/../app/views/demo/multi.rhtml:18:in `compile_template'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:319:in `compile_and_render_template'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+/var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+/var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+/var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+/var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+/var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+./script/server:3
+
+
+ActionView::TemplateError (compile error
+script/../config/../app/views/demo/multi.rhtml:6: syntax error, unexpected kEND, expecting ')'
+ end ; _erbout.concat "\n"
+    ^
+script/../config/../app/views/demo/multi.rhtml:18: syntax error, unexpected kEND, expecting ')') on line #6 of app/views/demo/multi.rhtml:
+3:   Description: <%= text_field_tag 'description' %><br />
+4:   Users: <%=# record_select_field 'users', {} %><br />
+5:   <%= submit_tag %>
+6: <% end %>
+7: 
+8: <p>
+9: <h5>Posted Params:</h5>
+
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:18:in `compile_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:319:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:16:45) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #4 of app/views/demo/multi.rhtml:
+1: <% form_tag do %>
+2:   Amount: <%= text_field_tag 'amount' %><br />
+3:   Description: <%= text_field_tag 'description' %><br />
+4:   Users: <%= record_select_field 'users' %><br />
+5:   <%= submit_tag %>
+6: <% end %>
+7: 
+
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:4:in `record_select_field'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:4:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:1:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:16:50) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.27588 (3 reqs/sec) | Rendering: 0.27425 (99%) | DB: 0.00000 (0%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:16:55) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000644)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00378)
+  [4;35;1mUser Load (0.001890)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01016)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01623)
+Completed in 0.02889 (34 reqs/sec) | Rendering: 0.01491 (51%) | DB: 0.00253 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:17:04) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+
+
+ActionView::TemplateError (uninitialized constant ArraysController) on line #4 of app/views/demo/multi.rhtml:
+1: <% form_tag do %>
+2:   Amount: <%= text_field_tag 'amount' %><br />
+3:   Description: <%= text_field_tag 'description' %><br />
+4:   Users: <%= record_select_field 'users', [] %><br />
+5:   <%= submit_tag %>
+6: <% end %>
+7: 
+
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:266:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:452:in `const_missing'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:464:in `const_missing'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/inflector.rb:250:in `constantize'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    vendor/plugins/record_select/lib/helpers.rb:120:in `assert_controller_responds'
+    vendor/plugins/record_select/lib/helpers.rb:47:in `record_select_field'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:4:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:1:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:17:33) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+
+
+ActionView::TemplateError (undefined method `new_record?' for []:Array) on line #4 of app/views/demo/multi.rhtml:
+1: <% form_tag do %>
+2:   Amount: <%= text_field_tag 'amount' %><br />
+3:   Description: <%= text_field_tag 'description' %><br />
+4:   Users: <%= record_select_field 'users', [], :controller => 'users' %><br />
+5:   <%= submit_tag %>
+6: <% end %>
+7: 
+
+    vendor/plugins/record_select/lib/helpers.rb:50:in `record_select_field'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:4:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `call'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:108:in `capture_erb_with_buffer'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/capture_helper.rb:67:in `capture'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/form_tag_helper.rb:51:in `form_tag'
+    #{RAILS_ROOT}/app/views/demo/multi.rhtml:1:in `_run_rhtml_47app47views47demo47multi46rhtml'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:806:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1101:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:17:42) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04409 (22 reqs/sec) | Rendering: 0.04010 (90%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:17:45) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000667)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00345)
+  [4;35;1mUser Load (0.002465)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01214)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01685)
+Completed in 0.03501 (28 reqs/sec) | Rendering: 0.01521 (43%) | DB: 0.00313 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:19:24) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.03007 (33 reqs/sec) | Rendering: 0.02902 (96%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:22:25) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.002363)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.27037 (3 reqs/sec) | Rendering: 0.01827 (6%) | DB: 0.00236 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:22:52) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001932)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.23960 (4 reqs/sec) | Rendering: 0.15228 (63%) | DB: 0.00193 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:23:26) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001613)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.22076 (4 reqs/sec) | Rendering: 0.11031 (49%) | DB: 0.00161 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:23:45) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001202)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.16904 (5 reqs/sec) | Rendering: 0.11008 (65%) | DB: 0.00120 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:24:06) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001230)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18372 (5 reqs/sec) | Rendering: 0.11221 (61%) | DB: 0.00123 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:24:41) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.002661)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.29749 (3 reqs/sec) | Rendering: 0.18986 (63%) | DB: 0.00266 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:25:03) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001275)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.22584 (4 reqs/sec) | Rendering: 0.11903 (52%) | DB: 0.00127 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:25:25) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001200)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.21139 (4 reqs/sec) | Rendering: 0.11362 (53%) | DB: 0.00120 (0%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:25:30) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000739)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00732)
+  [4;36;1mUser Load (0.003580)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.03078)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.04108)
+Completed in 0.06341 (15 reqs/sec) | Rendering: 0.03833 (60%) | DB: 0.00432 (6%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:26:12) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001204)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.21808 (4 reqs/sec) | Rendering: 0.11141 (51%) | DB: 0.00120 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:26:41) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001682)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.20791 (4 reqs/sec) | Rendering: 0.11411 (54%) | DB: 0.00168 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:28:34) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001888)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.35965 (2 reqs/sec) | Rendering: 0.20410 (56%) | DB: 0.00189 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:29:13) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001926)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.45992 (2 reqs/sec) | Rendering: 0.30080 (65%) | DB: 0.00193 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:35:40) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001269)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.22708 (4 reqs/sec) | Rendering: 0.10993 (48%) | DB: 0.00127 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:36:17) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001899)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.29688 (3 reqs/sec) | Rendering: 0.15715 (52%) | DB: 0.00190 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:38:44) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001293)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.21639 (4 reqs/sec) | Rendering: 0.11855 (54%) | DB: 0.00129 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:38:57) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"multi", "amount"=>"", "description"=>"", "controller"=>"demo", "users"=>["2", "1"]}
+  [4;35;1mUser Load (0.000916)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.02774 (36 reqs/sec) | Rendering: 0.01638 (59%) | DB: 0.00092 (3%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:41:06) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000700)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00625)
+  [4;35;1mUser Load (0.002852)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.02129)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.03064)
+Completed in 0.04819 (20 reqs/sec) | Rendering: 0.02863 (59%) | DB: 0.00355 (7%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:41:09) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000695)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00404)
+  [4;35;1mUser Load (0.002370)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01275)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01872)
+Completed in 0.04024 (24 reqs/sec) | Rendering: 0.01719 (42%) | DB: 0.00306 (7%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:41:11) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000491)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00234)
+  [4;35;1mUser Load (0.001439)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00677)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01051)
+Completed in 0.02163 (46 reqs/sec) | Rendering: 0.00962 (44%) | DB: 0.00193 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:51:00) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001306)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.20792 (4 reqs/sec) | Rendering: 0.11090 (53%) | DB: 0.00131 (0%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:51:02) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000544)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00375)
+  [4;36;1mUser Load (0.001780)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01046)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01618)
+Completed in 0.02839 (35 reqs/sec) | Rendering: 0.01496 (52%) | DB: 0.00232 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:51:04) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000453)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00209)
+  [4;36;1mUser Load (0.001690)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00710)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01011)
+Completed in 0.02158 (46 reqs/sec) | Rendering: 0.00896 (41%) | DB: 0.00214 (9%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 14:51:07) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000707)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00380)
+  [4;36;1mUser Load (0.002415)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01194)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01713)
+Completed in 0.03750 (26 reqs/sec) | Rendering: 0.01559 (41%) | DB: 0.00312 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 14:59:33) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001177)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.20496 (4 reqs/sec) | Rendering: 0.10904 (53%) | DB: 0.00118 (0%) | 200 OK [http://localhost/multi-select]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-08-19 14:59:34) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/javascripts/record_select/cross.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:03:12) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001222)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18157 (5 reqs/sec) | Rendering: 0.11525 (63%) | DB: 0.00122 (0%) | 200 OK [http://localhost/multi-select]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2007-08-19 15:03:12) [GET]
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/javascripts/record_select/cross.gif" with {:method=>:get}):
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /var/lib/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /var/lib/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:04:00) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001165)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.16132 (6 reqs/sec) | Rendering: 0.10985 (68%) | DB: 0.00117 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:04:23) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001906)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.24810 (4 reqs/sec) | Rendering: 0.15581 (62%) | DB: 0.00191 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:04:41) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.002721)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.26957 (3 reqs/sec) | Rendering: 0.15438 (57%) | DB: 0.00272 (1%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:05:22) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001222)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18268 (5 reqs/sec) | Rendering: 0.10884 (59%) | DB: 0.00122 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:05:40) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001199)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.16597 (6 reqs/sec) | Rendering: 0.11029 (66%) | DB: 0.00120 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:05:51) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001192)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18234 (5 reqs/sec) | Rendering: 0.10975 (60%) | DB: 0.00119 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:05:53) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;35;1mUser Load (0.003481)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04694 (21 reqs/sec) | Rendering: 0.02552 (54%) | DB: 0.00348 (7%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:06:33) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001648)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18400 (5 reqs/sec) | Rendering: 0.11100 (60%) | DB: 0.00165 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:08:11) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001228)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.16076 (6 reqs/sec) | Rendering: 0.10907 (67%) | DB: 0.00123 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:08:31) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001231)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.17410 (5 reqs/sec) | Rendering: 0.10946 (62%) | DB: 0.00123 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:09:10) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;35;1mUser Load (0.001449)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04549 (21 reqs/sec) | Rendering: 0.02612 (57%) | DB: 0.00145 (3%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:15:52) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001205)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.19297 (5 reqs/sec) | Rendering: 0.11555 (59%) | DB: 0.00120 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:16:20) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001915)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.25695 (3 reqs/sec) | Rendering: 0.15357 (59%) | DB: 0.00191 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:16:32) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001189)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.16214 (6 reqs/sec) | Rendering: 0.10903 (67%) | DB: 0.00119 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:24:43) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"multi", "amount"=>"", "description"=>"", "controller"=>"demo", "users"=>["2", "1"]}
+  [4;35;1mUser Load (0.001441)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04619 (21 reqs/sec) | Rendering: 0.02735 (59%) | DB: 0.00144 (3%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:34:28) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000688)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00643)
+  [4;35;1mUser Load (0.002891)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01824)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.02777)
+Completed in 0.04856 (20 reqs/sec) | Rendering: 0.02577 (53%) | DB: 0.00358 (7%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:34:33) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"multi", "amount"=>"", "description"=>"", "controller"=>"demo", "users"=>["9", "2", "1"]}
+  [4;36;1mUser Load (0.001490)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.08094 (12 reqs/sec) | Rendering: 0.06000 (74%) | DB: 0.00149 (1%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:34:40) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000665)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00350)
+  [4;36;1mUser Load (0.002254)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01082)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01562)
+Completed in 0.03276 (30 reqs/sec) | Rendering: 0.01419 (43%) | DB: 0.00292 (8%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:34:42) [GET]
+  Parameters: {"action"=>"browse", "controller"=>"users", "page"=>"2", "update"=>"1"}
+  [4;35;1mSQL (0.000622)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendering ../../vendor/plugins/record_select/lib/views/browse.rjs
+  [4;36;1mUser Load (0.002232)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 5[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01316)
+Completed in 0.04191 (23 reqs/sec) | Rendering: 0.02382 (56%) | DB: 0.00285 (6%) | 200 OK [http://localhost/users/browse?update=1&page=2]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:34:49) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"multi", "amount"=>"", "description"=>"", "controller"=>"demo", "users"=>["3"]}
+  [4;35;1mUser Load (0.001890)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04461 (22 reqs/sec) | Rendering: 0.02546 (57%) | DB: 0.00189 (4%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-19 15:34:52) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02599 (38 reqs/sec) | Rendering: 0.02489 (95%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:34:53) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;36;1mSQL (0.000539)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00274)
+  [4;35;1mUser Load (0.001533)[0m   [0mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.00818)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01197)
+Completed in 0.11741 (8 reqs/sec) | Rendering: 0.01103 (9%) | DB: 0.00207 (1%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:34:56) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001464)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04278 (23 reqs/sec) | Rendering: 0.02469 (57%) | DB: 0.00146 (3%) | 200 OK [http://localhost/multi-select]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:35:31) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000623)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00340)
+  [4;36;1mUser Load (0.002344)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01066)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01538)
+Completed in 0.03235 (30 reqs/sec) | Rendering: 0.01386 (42%) | DB: 0.00297 (9%) | 200 OK [http://localhost/users/browse]
+
+
+Processing UsersController#browse (for 127.0.0.1 at 2007-08-19 15:35:40) [POST]
+  Parameters: {"action"=>"browse", "controller"=>"users"}
+  [4;35;1mSQL (0.000759)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendered ../../vendor/plugins/record_select/lib/views/_search (0.00387)
+  [4;36;1mUser Load (0.002395)[0m   [0;1mSELECT * FROM users ORDER BY last_name ASC, first_name ASC LIMIT 5 OFFSET 0[0m
+Rendered ../../vendor/plugins/record_select/lib/views/_list (0.01103)
+Rendered ../../vendor/plugins/record_select/lib/views/_browse (0.01635)
+Completed in 0.03626 (27 reqs/sec) | Rendering: 0.01483 (40%) | DB: 0.00315 (8%) | 200 OK [http://localhost/users/browse]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:36:01) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;35;1mUser Load (0.001626)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.04150 (24 reqs/sec) | Rendering: 0.02376 (57%) | DB: 0.00163 (3%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:36:18) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001293)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.18307 (5 reqs/sec) | Rendering: 0.11238 (61%) | DB: 0.00129 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#link (for 127.0.0.1 at 2007-08-19 15:36:27) [GET]
+  Parameters: {"action"=>"link", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/link
+Completed in 0.04802 (20 reqs/sec) | Rendering: 0.04407 (91%) | 200 OK [http://localhost/link-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#ajax (for 127.0.0.1 at 2007-08-19 15:36:28) [GET]
+  Parameters: {"action"=>"ajax", "controller"=>"demo"}
+Rendering layoutfalseactionajax within layouts/application
+Rendering demo/ajax
+Completed in 0.01193 (83 reqs/sec) | Rendering: 0.00936 (78%) | 200 OK [http://localhost/ajax-loading]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:36:29) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;35;1mUser Load (0.000851)[0m   [0mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.14380 (6 reqs/sec) | Rendering: 0.12815 (89%) | DB: 0.00085 (0%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#form (for 127.0.0.1 at 2007-08-19 15:36:33) [GET]
+  Parameters: {"action"=>"form", "controller"=>"demo"}
+Rendering  within layouts/application
+Rendering demo/form
+Completed in 0.02836 (35 reqs/sec) | Rendering: 0.02611 (92%) | DB: 0.00000 (0%) | 200 OK [http://localhost/form-helper]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:36:38) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.000842)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.02563 (39 reqs/sec) | Rendering: 0.01458 (56%) | DB: 0.00084 (3%) | 200 OK [http://localhost/multi-select]
+DemoController: missing default helper path demo_helper
+
+
+Processing DemoController#multi (for 127.0.0.1 at 2007-08-19 15:37:11) [GET]
+  Parameters: {"action"=>"multi", "controller"=>"demo"}
+  [4;36;1mUser Load (0.001358)[0m   [0;1mSELECT * FROM users LIMIT 2[0m
+Rendering  within layouts/application
+Rendering demo/multi
+Completed in 0.17786 (5 reqs/sec) | Rendering: 0.10963 (61%) | DB: 0.00136 (0%) | 200 OK [http://localhost/multi-select]

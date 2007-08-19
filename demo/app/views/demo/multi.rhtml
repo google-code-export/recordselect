@@ -1,0 +1,16 @@
+<% form_tag do %>
+  Amount: <%= text_field_tag 'amount' %><br />
+  Description: <%= text_field_tag 'description' %><br />
+  Users: <%= record_multi_select_field 'users', @current, :controller => 'users' %><br />
+  <%= submit_tag %>
+<% end %>
+
+<p>
+<h5>Posted Params:</h5>
+<%= params.reject {|k,v| [:action, :controller].include? k.to_sym}.inspect %>
+</p>
+
+<div id="explanation">
+<p>This example is just a variation on <%= link_to 'the form demo', form_url %> with multi-select instead.</p>
+</div>
+
