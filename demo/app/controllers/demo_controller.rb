@@ -7,8 +7,6 @@ class DemoController < ApplicationController
   end
 
   def multi
-    @current = User.find(:all, :limit => 2).collect do |r|
-      [r.id, r.to_label]
-    end
+    @current = User.find(:all, :limit => 2)
   end
 end
