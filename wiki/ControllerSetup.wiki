@@ -17,6 +17,7 @@ The options you can pass are:
   * *:order_by*: a SQL string to order the search results
   * *:search_on*: a field name, or an array of field names. these fields will each be matched against each search term.
   * *:full_text_search*: a boolean for whether to use a %?% search pattern or not. default is false.
+  * *:label*: a proc that accepts a record and returns a descriptive string. the default one calls :to_label on the record.
 
 
-
+ 
