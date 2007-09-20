@@ -7,7 +7,17 @@
 <% form_tag do %>
   Amount: <%= text_field_tag 'amount' %><br />
   Description: <%= text_field_tag 'description' %><br />
-  User: <%= record_select_field 'user', User.new %><br />
+  User: <%= record_select_field 'user', selected_user || User.new %><br />
+<% end %>
+}}}
+
+* record_multi_select_field
+
+{{{
+<% form_tag do %>
+  Amount: <%= text_field_tag 'amount' %><br />
+  Description: <%= text_field_tag 'description' %><br />
+  User: <%= record_multi_select_field 'user', @current, :controller => 'users' %><br />
 <% end %>
 }}}
 
@@ -18,3 +28,4 @@
 }}}
 
 You can see these examples in action in the [demo].
+ 
