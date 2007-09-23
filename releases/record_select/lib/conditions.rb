@@ -1,19 +1,28 @@
 module RecordSelect
   module Conditions
     protected
+    # returns the combination of all conditions.
+    # conditions come from:
+    # * current search (params[:search])
+    # * intelligent url params (e.g. params[:first_name] if first_name is a model column)
+    # * specific conditions supplied by the developer
     def record_select_conditions
       conditions = []
 
       merge_conditions(
         record_select_conditions_from_search,
         record_select_conditions_from_params,
-        conditions_for_collection
+        record_select_conditions_from_controller
       )
     end
 
     # an override method.
     # here you can provide custom conditions to define the selectable records. useful for situational restrictions.
-    def conditions_for_collection; end
+    def record_select_conditions_from_controller; end
+
+    # another override method.
+    # define any association includes you want for the finder search.
+    def record_select_includes; end
 
     # generate conditions from params[:search]
     # override this if you want to customize the search routine
@@ -37,28 +46,29 @@ module RecordSelect
     def record_select_conditions_from_params
       conditions = nil
       params.each do |field, value|
-        next unless record_select_config.model.columns_hash.has_key? field
-        conditions = merge_conditions(conditions, ["LOWER(#{field}) LIKE ?", value])
+        next unless column = record_select_config.model.columns_hash[field]
+        conditions = merge_conditions(
+          conditions,
+          record_select_condition_for_column(column, value)
+        )
       end
       conditions
     end
 
-    unless method_defined? :merge_conditions # may be provided by ActiveScaffold
-    def merge_conditions(*conditions)
-      sql, values = [], []
-      conditions.compact.each do |condition|
-        next if condition.empty? # .compact removes nils but it doesn't remove empty arrays.
-        condition = condition.clone
-        # "name = 'Joe'" gets parsed to sql => "name = 'Joe'", values => []
-        # ["name = '?'", 'Joe'] gets parsed to sql => "name = '?'", values => ['Joe']
-        sql << ((condition.is_a? String) ? condition : condition.shift)
-        values += (condition.is_a? String) ? [] : condition
+    # generates an SQL condition for the given column/value
+    def record_select_condition_for_column(column, value)
+      if value.nil?
+        "#{column.name} IS NULL"
+      elsif column.text?
+        ["LOWER(#{field}) LIKE ?", value]
+      elsif column.number?
+        ["#{field} = ?", value]
       end
-      # if there are no values, then simply return the joined sql. otherwise, stick the joined sql onto the beginning of the values array and return that.
-      conditions = values.empty? ? sql.join(" AND ") : values.unshift(sql.join(" AND "))
-      conditions = nil if conditions.empty?
-      conditions
     end
+
+    def merge_conditions(*conditions) #:nodoc:
+      c = conditions.find_all {|c| not c.nil? and not c.empty? }
+      c.empty? ? nil : c.collect{|c| ActiveRecord::Base.send(:sanitize_sql, c)}.join(' AND ')
     end
   end
 end

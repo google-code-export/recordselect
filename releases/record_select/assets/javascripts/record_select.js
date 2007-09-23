@@ -116,6 +116,25 @@ Object.extend(RecordSelect.Abstract.prototype, {
     e.style.display = 'none';
 
     return $(e);
+  },
+
+  /**
+   * all the behavior to respond to a text field as a search box
+   */
+  _respond_to_text_field: function(text_field) {
+    // attach the events to start this party
+    text_field.observe('focus', this.open.bind(this));
+
+    // the autosearch event
+    text_field.observe('keypress', function() {
+      if (!this.is_open()) return;
+      this.container.down('.text-input').value = text_field.value;
+    }.bind(this));
+
+    // keyboard navigation, if available
+    if (this.onkeypress) {
+      text_field.observe('keypress', this.onkeypress.bind(this));
+    }
   }
 });
 
@@ -156,7 +175,10 @@ Object.extend(RecordSelect.Abstract.prototype, {
       case Event.KEY_ESC:
         this.close();
         break;
+      default:
+        return;
     }
+    Event.stop(ev); // so "enter" doesn't submit the form, among other things(?)
   },
 
   /**
@@ -179,7 +201,7 @@ RecordSelect.Dialog.prototype = Object.extend(new RecordSelect.Abstract(), {
     this.container = this.create_container();
     this.obj.observe('click', this.toggle.bind(this));
 
-    if (this.onkeypress) this.obj.observe('keyup', this.onkeypress.bind(this));
+    if (this.onkeypress) this.obj.observe('keypress', this.onkeypress.bind(this));
   },
 
   onselect: function(id, value) {
@@ -196,9 +218,13 @@ RecordSelect.Dialog.prototype = Object.extend(new RecordSelect.Abstract(), {
  * Used by record_select_field helper
  * The options hash may contain id: and label: keys, designating the current value
  */
-RecordSelect.Autocomplete = Class.create();
-RecordSelect.Autocomplete.prototype = Object.extend(new RecordSelect.Abstract(), {
+RecordSelect.Single = Class.create();
+RecordSelect.Single.prototype = Object.extend(new RecordSelect.Abstract(), {
   onload: function() {
+    // initialize the container
+    this.container = this.create_container();
+    this.container.addClassName('record-select-autocomplete');
+
     // create the hidden input
     new Insertion.After(this.obj, '<input type="hidden" name="" value="" />')
     this.hidden_input = this.obj.next();
@@ -210,20 +236,14 @@ RecordSelect.Autocomplete.prototype = Object.extend(new RecordSelect.Abstract(),
     // initialize the values
     this.set(this.options.id, this.options.label);
 
-    // initialize the container
-    this.container = this.create_container();
-    this.container.addClassName('record-select-autocomplete');
+    this._respond_to_text_field(this.obj);
+  },
 
-    // attach the events to start this party
-    this.obj.observe('focus', this.open.bind(this));
+  close: function() {
+    // if they close the dialog with the text field empty, then delete the id value
+    if (this.obj.value == '') this.set('', '');
 
-    // the autosearch event
-    this.obj.observe('keyup', function() {
-      if (!this.is_open()) return;
-      this.container.down('.text-input').value = this.obj.value;
-    }.bind(this));
-
-    if (this.onkeypress) this.obj.observe('keyup', this.onkeypress.bind(this));
+    RecordSelect.Abstract.prototype.close.call(this);
   },
 
   onselect: function(id, value) {
@@ -240,72 +260,55 @@ RecordSelect.Autocomplete.prototype = Object.extend(new RecordSelect.Abstract(),
   }
 });
 
-TextFieldWithExample = Class.create();
-TextFieldWithExample.prototype = {
-  initialize: function(inputElementId, defaultText, options) {
-    this.setOptions(options);
+/**
+ * Used by record_multi_select_field helper.
+ * Options:
+ *   list - the id (or object) of the <ul> to contain the <li>s of selected entries
+ *   current - an array of id:/label: keys designating the currently selected entries
+ */
+RecordSelect.Multiple = Class.create();
+RecordSelect.Multiple.prototype = Object.extend(new RecordSelect.Abstract(), {
+  onload: function() {
+    // initialize the container
+    this.container = this.create_container();
+    this.container.addClassName('record-select-autocomplete');
 
-    this.input = $(inputElementId);
-    this.name = this.input.name;
-    this.defaultText = defaultText;
-    this.createHiddenInput();
+    // decide where the <li> entries should be placed
+    if (this.options.list) this.list_container = $(this.options.list);
+    else this.list_container = this.obj.next('ul');
 
-    this.checkAndShowExample();
+    // take the input name from the text input, and store it for this.add()
+    this.input_name = this.obj.name;
+    this.obj.name = '';
 
-    Event.observe(this.input, "blur", this.onBlur.bindAsEventListener(this));
-    Event.observe(this.input, "focus", this.onFocus.bindAsEventListener(this));
-    Event.observe(this.input, "select", this.onFocus.bindAsEventListener(this));
-    Event.observe(this.input, "keydown", this.onKeyPress.bindAsEventListener(this));
-    Event.observe(this.input, "click", this.onClick.bindAsEventListener(this));
+    // initialize the list
+    $A(this.options.current).each(function(c) {
+      this.add(c.id, c.label);
+    }.bind(this));
+
+    this._respond_to_text_field(this.obj);
   },
-  createHiddenInput: function() {
-    this.hiddenInput = document.createElement("input");
-    this.hiddenInput.type = "hidden";
-    this.hiddenInput.value = "";
-    this.input.parentNode.appendChild(this.hiddenInput);
+
+  onselect: function(id, value) {
+    this.add(id, value);
+    this.close();
   },
-  setOptions: function(options) {
-      this.options = { exampleClassName: 'example' };
-      Object.extend(this.options, options || {});
-    },
-  onKeyPress: function(event) {
-    if (!event) var event = window.event;
-    var code = (event.which) ? event.which : event.keyCode
-    if (this.isAlphanumeric(code)) {
-      this.removeExample();
-    }
-  },
-  onBlur: function(event) {
-    this.checkAndShowExample();
-  },
-  onFocus: function(event) {
-    if (this.exampleShown()) {
-        this.removeExample();
-      }
-  },
-  onClick: function(event) {
-    this.removeExample();
-  },
-  isAlphanumeric: function(keyCode) {
-    return keyCode >= 40 && keyCode <= 90;
-  },
-  checkAndShowExample: function() {
-    if (this.input.value == '') {
-      this.input.value = this.defaultText;
-      this.input.name = null;
-      this.hiddenInput.name = this.name;
-      Element.addClassName(this.input, this.options.exampleClassName);
-    }
-  },
-  removeExample: function() {
-    if (this.exampleShown()) {
-      this.input.value = '';
-      this.input.name = this.name;
-      this.hiddenInput.name = null;
-      Element.removeClassName(this.input, this.options.exampleClassName);
-    }
-  },
-  exampleShown: function() {
-    return Element.hasClassName(this.input, this.options.exampleClassName);
+
+  /**
+   * Adds a record to the selected list
+   */
+  add: function(id, label) {
+    // return silently if this value has already been selected
+    var already_selected = this.list_container.getElementsBySelector('input').any(function(i) {
+      return i.value == id
+    });
+    if (already_selected) return;
+
+    var entry = '<li>'
+              + '<a href="#" onclick="$(this.parentNode).remove();" class="remove">remove</a>'
+              + '<input type="hidden" name="' + this.input_name + '" value="' + id + '" />'
+              + '<label>' + label + '</label>'
+              + '</li>';
+    new Insertion.Top(this.list_container, entry);
   }
-}
+});
