@@ -57,10 +57,11 @@ Object.extend(RecordSelect.Abstract.prototype, {
     if (this.is_open()) return;
 
     new Ajax.Updater(this.container, this.url, {
+      method: 'get',
       evalScripts: true,
       asynchronous: true,
       insertion: Insertion.Bottom,
-      onSuccess: function() {
+      onComplete: function() {
         this.show();
         Element.observe(document.body, 'click', this.onbodyclick.bindAsEventListener(this));
       }.bind(this)
@@ -75,13 +76,30 @@ Object.extend(RecordSelect.Abstract.prototype, {
     this.container.style.left = offset[0] + 'px';
     this.container.style.top = (Element.getHeight(this.obj) + offset[1]) + 'px';
 
+    if (this._use_iframe_mask()) {
+      this.container.insertAdjacentHTML('afterEnd', '<iframe src="javascript:false;" class="record-select-mask" />');
+      var mask = this.container.next('iframe');
+      mask.style.left = this.container.style.left;
+      mask.style.top = this.container.style.top;
+    }
+
     this.container.show();
+
+    if (this._use_iframe_mask()) {
+      var dimensions = this.container.immediateDescendants().first().getDimensions();
+      mask.style.width = dimensions.width + 'px';
+      mask.style.height = dimensions.height + 'px';
+    }
   },
 
   /**
    * closes the recordselect by emptying the container
    */
   close: function() {
+    if (this._use_iframe_mask()) {
+      this.container.next('iframe').remove();
+    }
+
     this.container.hide();
     // hopefully by using remove() instead of innerHTML we won't leak memory
     this.container.immediateDescendants().invoke('remove');
@@ -135,6 +153,10 @@ Object.extend(RecordSelect.Abstract.prototype, {
     if (this.onkeypress) {
       text_field.observe('keypress', this.onkeypress.bind(this));
     }
+  },
+
+  _use_iframe_mask: function() {
+    return this.container.insertAdjacentHTML ? true : false;
   }
 });
 
@@ -217,6 +239,7 @@ RecordSelect.Dialog.prototype = Object.extend(new RecordSelect.Abstract(), {
 /**
  * Used by record_select_field helper
  * The options hash may contain id: and label: keys, designating the current value
+ * The options hash may also include an onchange: key, where the value is a javascript function (or eval-able string) for an callback routine.
  */
 RecordSelect.Single = Class.create();
 RecordSelect.Single.prototype = Object.extend(new RecordSelect.Abstract(), {
@@ -237,6 +260,7 @@ RecordSelect.Single.prototype = Object.extend(new RecordSelect.Abstract(), {
     this.set(this.options.id, this.options.label);
 
     this._respond_to_text_field(this.obj);
+    if (this.obj.focused) this.open(); // if it was focused before we could attach observers
   },
 
   close: function() {
@@ -247,6 +271,7 @@ RecordSelect.Single.prototype = Object.extend(new RecordSelect.Abstract(), {
   },
 
   onselect: function(id, value) {
+    if (this.options.onchange) this.options.onchange(id, value);
     this.set(id, value);
     this.close();
   },
@@ -287,6 +312,7 @@ RecordSelect.Multiple.prototype = Object.extend(new RecordSelect.Abstract(), {
     }.bind(this));
 
     this._respond_to_text_field(this.obj);
+    if (this.obj.focused) this.open(); // if it was focused before we could attach observers
   },
 
   onselect: function(id, value) {
