@@ -74,3 +74,22 @@ h1, h2, h3, h4, h5 {
 #loading-area #explanation {
   display: none;
 }
+
+/* custom RecordSelect - User */
+.user_description {
+  overflow: auto;
+  zoom: 1;
+}
+.user_description img {
+  float: left;
+  padding: 7px;
+}
+.user_description p {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.user_description label {
+  float: left;
+  font-size: 0.8em;
+  font-weight: normal;
+}
