@@ -1,5 +1,60 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-one:
+jerry:
   id: 1
-two:
+  username: jerry
+  first_name: Jerry
+  last_name: Smith
+shadow:
   id: 2
+  username: shadow
+  first_name: Sam
+  last_name: Dickerson
+catgrl:
+  id: 3
+  username: catgrl
+  first_name: Sara
+  last_name: Nowatte
+cain:
+  id: 4
+  username: cain
+  first_name: Cain
+  last_name: Levy
+flier:
+  id: 5
+  username: flier
+  first_name: Fred
+  last_name: Swallow
+hazel:
+  id: 6
+  username: hazel
+  first_name: Hazel
+  last_name: Dickerson
+matterhorn:
+  id: 7
+  username: matterhorn
+  first_name: Hulk
+  last_name: Jones
+bud:
+  id: 8
+  username: bud
+  first_name: Billy
+  last_name: Edwards
+gruff:
+  id: 9
+  username: gruff
+  first_name: Boy
+  last_name: Jones
+molly:
+  id: 10
+  username: molly
+  first_name: Molly
+  last_name: Mitchell
+sugarnspice:
+  id: 11
+  username: sugarnspice
+  first_name: Tammy
+  last_name: Rallins
+charity:
+  id: 12
+  username: charity
+  first_name: Charity
+  last_name: Stucke
