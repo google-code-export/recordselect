@@ -1,9 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   map.connect '', :controller => 'demo', :action => 'index'
-  map.form 'form-helper', :controller => 'demo', :action => 'form'
-  map.multi 'multi-select', :controller => 'demo', :action => 'multi'
+
+  # the users recordselect controller
+  map.resources :users, :collection => { :browse => :get }, :member => { :select => :post }
+
+  # misc demos
   map.link 'link-helper', :controller => 'demo', :action => 'link'
   map.ajax 'ajax-loading', :controller => 'demo', :action => 'ajax'
 
-  map.connect 'users/:action/:id', :controller => 'users'
+  # form demos
+  map.resources :groups
 end

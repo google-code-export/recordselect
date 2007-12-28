@@ -5,8 +5,4 @@ class DemoController < ApplicationController
       wants.js {render :action => 'link', :layout => false}
     end
   end
-
-  def multi
-    @current = User.find(:all, :limit => 2)
-  end
 end

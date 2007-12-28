@@ -44,9 +44,11 @@ h1, h2, h3, h4, h5 {
 #menu a:focus { outline: none; }
 
 #demo-link #link-tab a,
-#demo-form #form-tab a,
-#demo-ajax #ajax-tab a,
-#demo-multi #multi-tab a {
+#groups-new #new-group-tab a,
+#groups-create #new-group-tab a,
+#groups-edit #edit-group-tab a,
+#groups-update #edit-group-tab a,
+#demo-ajax #ajax-tab a {
   background-color: #a18e69;
   border-color: #a18e69;
   color: #fff;

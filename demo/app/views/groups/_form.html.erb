@@ -1,0 +1,23 @@
+<% form_for group do |f| %>
+  <div>
+    <label>Name</label>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <label>Owner</label>
+    <%= f.record_select :owner %>
+  </div>
+
+  <div>
+    <label>Members</label>
+    <%= f.record_select :users %>
+  </div>
+
+  <div>
+    <label>Category</label>
+    <%= select_tag 'category', options_for_select({'User' => 2, 'Admin' => 1}) %>
+  </div>
+
+  <%= submit_tag "Save" %>
+<% end %>

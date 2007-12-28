@@ -1,0 +1,10 @@
+<h3>New Group</h3>
+<%= render :partial => 'form', :locals => {:group => @group} %>
+
+<%= expose_params %>
+
+<div id="explanation">
+  <p>This shows RecordSelect in a form using the simple FormBuilder syntax (e.g. &lt;%= form.record_select :users %> in a <i>form_for</i> block). This form_for helper automatically determines whether to delegate to the <i>record_select_field</i> or <i>record_multi_select_field</i> helper.</p>
+
+  <p>Also notice the &lt;select> box: it should hide underneath the RecordSelect dialog in IE6, provided the iFrame hack is working properly.</p>
+</div>

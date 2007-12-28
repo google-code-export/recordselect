@@ -2,7 +2,22 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 4) do
+
+  create_table "groups", :force => true do |t|
+    t.column "name",     :string
+    t.column "owner_id", :integer, :null => false
+  end
+
+  add_index "groups", ["owner_id"], :name => "index_groups_on_owner_id"
+
+  create_table "groups_users", :id => false, :force => true do |t|
+    t.column "group_id", :integer, :null => false
+    t.column "user_id",  :integer, :null => false
+  end
+
+  add_index "groups_users", ["user_id"], :name => "index_groups_users_on_user_id"
+  add_index "groups_users", ["group_id"], :name => "index_groups_users_on_group_id"
 
   create_table "users", :force => true do |t|
     t.column "username",   :string
