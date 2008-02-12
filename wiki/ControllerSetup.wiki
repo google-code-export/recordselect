@@ -18,6 +18,7 @@ The options you can pass are:
   * *:search_on*: a field name, or an array of field names. these fields will each be matched against each search term.
   * *:full_text_search*: a boolean for whether to use a %?% search pattern or not. default is false.
   * *:label*: a proc that accepts a record and returns a descriptive string. the default one calls :to_label on the record.
+  * *:include*: as for ActiveRecord::Base#find. can help with search conditions or just help optimize rendering the results.
 
 
  
