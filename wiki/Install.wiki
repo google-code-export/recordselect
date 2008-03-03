@@ -1,6 +1,12 @@
 #summary Installing and setting up RecordSelect in your own Rails application.
 #labels Featured
 
+==PREPARING==
+  # Install Paginator
+    `sudo gem install paginator`
+  # Make sure you are including Prototype from your layout:
+    `<%= javascript_include_tag :defaults %>`
+
 ==INSTALL==
   # Install from SVN:
     `./script/plugin install http://recordselect.googlecode.com/svn/releases/record_select`
@@ -13,4 +19,3 @@
   # Optional: to use RecordSelect RESTfully, add the following to your routes.rb:
     `map.resources :model_id, :collection => {:browse => :get}, :member => {:select => :post}`
   # Now go ahead and [HelperExamples use it somewhere.]
-
