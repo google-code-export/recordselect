@@ -9,7 +9,7 @@
 
 ==INSTALL==
   # Download from GitHub and unzip into vendor/plugins.
-    `http://github.com/cainlevy/recordselect/zipball/master
+    `http://github.com/cainlevy/recordselect/zipball/master`
   # Then add the CSS and JavaScript to your layout by including the following line:
     `<%= record_select_includes %>`
   # [ControllerSetup Enable and configure it on a controller.]
